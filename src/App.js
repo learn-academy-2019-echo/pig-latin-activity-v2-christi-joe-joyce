@@ -35,14 +35,18 @@ class App extends React.Component { // inserting component here for react
           }
           else {
             for(let j = 0; j < translatedArr[i].length; j++) {
-              if (vowelsY.includes(translatedArr[i][j])) {
-                translatedBeforeJoin.push(translatedArr[i].slice(j) + translatedArr[i].slice(0,j) +"ay")
+              if (vowelsY.includes(translatedArr[i][j]) && translatedArr[i][j] === "u" && translatedArr[i][j-1] === "q") {
+                translatedBeforeJoin.push(translatedArr[i].slice(j+1) + translatedArr[i].slice(0,j+1) +"ay")
                 break
                 //console.log(translatedBeforeJoin)
+              } else if (vowelsY.includes(translatedArr[i][j])) {
+                translatedBeforeJoin.push(translatedArr[i].slice(j) + translatedArr[i].slice(0,j) +"ay")
+                break
               }
             }
           }
       }
+      
       // console.log(vowels)
       // console.log(vowelsY)
     }
@@ -65,7 +69,8 @@ class App extends React.Component { // inserting component here for react
       <div className="wrapper">
         <header className="box header">
           <div id="pigImage">
-            <img src='https://lh3.googleusercontent.com/QvvsRY5ShwDNEouVMK8_z7QCwS3grkgd4mzZOlom23Hurralk54ObvsyEMM8ZSNR5pEFBeBMzltzEEcgi2llYJnhXTuXClN3njmMjtw3vgn8Go5jr40fHMNzfI64eYRrnHbZUutxCA=w2400' alt="pig with butcher cut names in pig latin" id="butcherPig"></img>
+            <img src='https://www.publicdomainpictures.net/download-picture.php?id=215663&check=dd1fa98d103e3740df4d4a313a30cf14'
+            alt="cute pigs gossipping in latin" id="butcherPig"></img>
           </div>
         </header>
         <sidebar className="box sidebar">

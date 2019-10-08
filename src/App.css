@@ -31,10 +31,14 @@ body {
   }
 
 #butcherPig {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
     padding-top: .5em;
   }
+  
+#pigImage {
+  text-align: center;
+}
 
     @media only screen and (min-width: 500px)  {
       .wrapper {
