@@ -27,11 +27,11 @@ class App extends React.Component { // inserting component here for react
       if (vowels.includes(translatedArr[i][0])){
         // execute vowel condition
         translatedBeforeJoin.push(translatedArr[i] + "way")
-        console.log(translatedBeforeJoin)
+        //console.log(translatedBeforeJoin)
       } else if (!vowels.includes(translatedArr[i][0])){
           if(translatedArr[i][0] === "q") {
             translatedBeforeJoin.push(translatedArr[i].slice(2) + "quay")
-            console.log(translatedBeforeJoin)
+            //console.log(translatedBeforeJoin)
           }
           else {
             for(let j = 0; j < translatedArr[i].length; j++) {
@@ -45,7 +45,7 @@ class App extends React.Component { // inserting component here for react
       // console.log(vowels)
       // console.log(vowelsY)
     }
-
+    translated = translatedBeforeJoin.join(" ")
     
     this.setState({phraseTranslated: translated}) // updates phraseTranslated to be the new translated phrase. this should be towards the end of the processing parts of the function
   }
