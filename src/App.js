@@ -45,7 +45,11 @@ class App extends React.Component { // inserting component here for react
       // console.log(vowels)
       // console.log(vowelsY)
     }
-    translated = translatedBeforeJoin.join(" ")
+    
+    // translatedBeforeJoin[0][0].topperCase() 
+    const translatedNotCap = translatedBeforeJoin.join(" ")
+    let firstLetter = translatedNotCap[0].toUpperCase()
+    translated = firstLetter + translatedNotCap.slice(1)
     
     this.setState({phraseTranslated: translated}) // updates phraseTranslated to be the new translated phrase. this should be towards the end of the processing parts of the function
   }
