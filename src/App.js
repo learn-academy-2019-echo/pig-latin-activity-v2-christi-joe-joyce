@@ -23,7 +23,7 @@ class App extends React.Component { // inserting component here for react
     let vowelsY = vowels.concat("y")
     let translatedArr = translated.toLowerCase().split(" ")
     let translatedBeforeJoin = []
-    for (let i=0; i<translatedArr.length; i++) 
+    for (let i=0; i<translatedArr.length; i++) {
       if (vowels.includes(translatedArr[i][0])){
         // execute vowel condition
         translatedBeforeJoin.push(translatedArr[i] + "way")
