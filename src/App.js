@@ -37,6 +37,7 @@ class App extends React.Component { // inserting component here for react
             for(let j = 0; j < translatedArr[i].length; j++) {
               if (vowelsY.includes(translatedArr[i][j])) {
                 translatedBeforeJoin.push(translatedArr[i].slice(j) + translatedArr[i].slice(0,j) +"ay")
+                break
                 //console.log(translatedBeforeJoin)
               }
             }
@@ -84,7 +85,7 @@ class App extends React.Component { // inserting component here for react
         </main>
         <footer className="box footer">
           <div className="text-center">
-            <p>Coded by * * *</p>
+            <p>Christi, Joe, and Joyce</p>
           </div>
         </footer>
       </div>
