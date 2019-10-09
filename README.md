@@ -113,7 +113,7 @@ class App extends React.Component {
     super(props)
     this.state = {
       phrase: '',
-      phraseTranslated: 'This is where your translated sentence will appear.'
+      phraseTranslated: 'Put in special characters, if you dare'
     }
   }
   
